@@ -28,9 +28,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `genero` (
-  `id_genero` int(11) NOT NULL,
-  `nome` varchar(50) NOT NULL DEFAULT ''
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    `id_genero` INT(11) NOT NULL,
+    `nome` VARCHAR(50) NOT NULL DEFAULT ''
+)  ENGINE=INNODB DEFAULT CHARSET=UTF8MB4;
 
 -- --------------------------------------------------------
 
@@ -88,6 +88,8 @@ ALTER TABLE `livro_genero`
 --
 ALTER TABLE `livro`
   MODIFY `id_livro` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `genero`
+	MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

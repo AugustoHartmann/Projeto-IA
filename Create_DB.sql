@@ -26,6 +26,8 @@ SET time_zone = "+00:00";
 --
 -- Estrutura da tabela `genero`
 --
+CREATE DATABASE `sistemarecomendacao`;
+USE `sistemarecomendacao`;
 
 CREATE TABLE `genero` (
   `id_genero` int(11) NOT NULL,

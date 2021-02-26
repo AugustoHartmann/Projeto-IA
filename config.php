@@ -7,13 +7,13 @@ global $db;
 $config = array();
 if(ENVIRONMENT == 'development') {
 	define("BASE_URL", "http://localhost/lojaVirtual/nova_loja/");
-	$config['dbname'] = 'ia';
+	$config['dbname'] = 'sistemarecomendacao';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 } else {
 	define("BASE_URL", "http://localhost/nova_loja/");
-	$config['dbname'] = 'ia';
+	$config['dbname'] = 'sistemarecomendacao';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = 'root';

@@ -6,17 +6,17 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/lojaVirtual/nova_loja/");
+	define("BASE_URL", "http://localhost/ia/");
 	$config['dbname'] = 'ia';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = '';
 } else {
-	define("BASE_URL", "http://localhost/nova_loja/");
-	$config['dbname'] = 'ia';
-	$config['host'] = 'localhost';
-	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'root';
+	define("BASE_URL", "");
+	$config['dbname'] = '';
+	$config['host'] = '';
+	$config['dbuser'] = '';
+	$config['dbpass'] = '';
 }
 
 $config['default_lang'] = "en";

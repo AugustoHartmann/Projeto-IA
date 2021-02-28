@@ -4,42 +4,44 @@ class Core {
 	public function run() {
         $url = '/'.(isset($_GET['q'])?$_GET['q']:'');
 
-		$params = array();
+		$parametros = array();
 		if(!empty($url) && $url != '/') {
 			$url = explode('/', $url);
 			array_shift($url);
 
-			$currentController = $url[0].'Controller';
+			$atualController = $url[0].'Controller';
 			array_shift($url);
 
 			if(isset($url[0]) && $url[0] != '/') {
-				$currentAction = $url[0];
+				$atualAcao = $url[0];
 				array_shift($url);
 			} else {
-				$currentAction = 'index';
+				$atualAcao = 'index';
 			}
 
 			if(count($url) > 0) {
-				$params = $url;
+				$parametros = $url;
 			}
 
 		} else {
-			$currentController = 'homeController';
-			$currentAction = 'index';
+			$atualController = 'homeController';
+			$atualAcao = 'index';
 		}
 
-		if(!file_exists('controllers/'.$currentController.'.php')) {
-			$currentController = 'notFoundController';
-			$currentAction = 'index';
+
+		if(!file_exists('controllers/'.$atualController.'.php')) {
+			$atualController = 'notFoundController';
+			$atualAcao = 'index';
 		}
 
-		$c = new $currentController();
-
-		if(!method_exists($c, $currentAction)) {
-			$currentAction = 'index';
+		$c = new $atualController();
+		
+		if(!method_exists($c, $atualAcao)) {
+			$atualAcao = 'index';
 		}
 
-		call_user_func_array(array($c, $currentAction), $params);
+		
+		call_user_func_array(array($c, $atualAcao), $parametros);
 
 	}
 

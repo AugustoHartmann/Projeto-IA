@@ -1,13 +1,8 @@
 <?php
-class controller {
+
+class Controller {
 
 	protected $db;
-	protected $lang;
-
-	public function __construct() {
-		global $config;
-
-	}
 
 	public function loadView($viewName, $viewData = array()) {
 		extract($viewData);

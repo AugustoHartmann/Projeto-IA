@@ -2,8 +2,8 @@
 
 <?php
 	$variavel = 0;
-	//print_r($livros);
-	//exit;
+	//print_r($livro);
+
 ?>
 
 

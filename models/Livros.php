@@ -38,7 +38,7 @@
                     return '';
                 }
             } else {
-                getSortidosLivros();
+                return $this->getSortidosLivros();
             }
 
         }

@@ -2,6 +2,7 @@
 
 <?php
 	$variavel = 0;
+	//print_r($livro);
 	//print_r($livros);
 	//exit;
 ?>

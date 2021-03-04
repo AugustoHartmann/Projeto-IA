@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 26, 2021 at 02:36 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Host: localhost
+-- Tempo de geração: 26-Fev-2021 às 02:49
+-- Versão do servidor: 10.4.14-MariaDB
+-- versão do PHP: 7.4.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,14 +18,16 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ia`
+-- Banco de dados: `sistemarecomendacao`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `genero`
+-- Estrutura da tabela `genero`
 --
+CREATE DATABASE `sistemarecomendacao`;
+USE `sistemarecomendacao`;
 
 CREATE TABLE `genero` (
   `id_genero` int(11) NOT NULL,
@@ -35,7 +37,7 @@ CREATE TABLE `genero` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `livro`
+-- Estrutura da tabela `livro`
 --
 
 CREATE TABLE `livro` (
@@ -47,7 +49,7 @@ CREATE TABLE `livro` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `livro_genero`
+-- Estrutura da tabela `livro_genero`
 --
 
 CREATE TABLE `livro_genero` (
@@ -56,23 +58,23 @@ CREATE TABLE `livro_genero` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Indexes for dumped tables
+-- Índices para tabelas despejadas
 --
 
 --
--- Indexes for table `genero`
+-- Índices para tabela `genero`
 --
 ALTER TABLE `genero`
   ADD PRIMARY KEY (`id_genero`);
 
 --
--- Indexes for table `livro`
+-- Índices para tabela `livro`
 --
 ALTER TABLE `livro`
   ADD PRIMARY KEY (`id_livro`);
 
 --
--- Indexes for table `livro_genero`
+-- Índices para tabela `livro_genero`
 --
 ALTER TABLE `livro_genero`
   ADD PRIMARY KEY (`id_livro`),
@@ -80,11 +82,17 @@ ALTER TABLE `livro_genero`
   ADD KEY `id_livro` (`id_livro`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
--- AUTO_INCREMENT for table `livro`
+-- AUTO_INCREMENT de tabela `genero`
+--
+ALTER TABLE `genero`
+  MODIFY `id_genero` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `livro`
 --
 ALTER TABLE `livro`
   MODIFY `id_livro` int(11) NOT NULL AUTO_INCREMENT;

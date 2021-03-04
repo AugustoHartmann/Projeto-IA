@@ -27,7 +27,7 @@
 				<nav>
 					<ul>
 						<?php foreach($genero as $g):?>
-							<li><a href="<?php echo BASE_URL;?>tipo/?nome=<?php echo $g['nome']?>"><?php echo $g['nome']?></a></li>
+							<li><a href="<?php echo BASE_URL;?>assets/tipo/<?php echo $g['nome']?>"><?php echo $g['nome']?></a></li>
 						<?php endforeach;?>
 					</ul>	
 				</nav>
@@ -44,9 +44,7 @@
 								<div id="livro">
 								
 									<div id="div-imagem">
-										<a href="<?php echo BASE_URL?>livro/?id=<?php echo $l['id_livro']?>">
-											<img src="<?php echo BASE_URL; ?>assets/images/<?php echo $l['foto']?>" alt="">
-										</a>
+										<img src="<?php echo BASE_URL; ?>assets/images/<?php echo $l['foto']?>" alt="">
 									</div>
 								
 									<div>

@@ -84,12 +84,50 @@ nav ul li a:hover {
 
 }
 
+#div-imagem {
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    border-radius: 10px;
+}
 
-#livros {
-     background-color: white;
-     height: 50px;
+#div-imagem img {
+    width: 100%;
+    height: 100%;
+}
 
+#livros{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
 
+#div-livros {
+    text-align: center;
+    display:flex;
+}
+
+#livro {
+    background-color: rgb(214, 212, 212);
+    padding: 24px;
+    margin: 8px;
+    width: 210px;
+    margin-left: 52px;
+    border-radius: 20px;
+}
+
+#section-livros {
+    max-width: 1100px;
+}
+
+/* -----------------------------------*/
+/* ---------->>> Home Header <<<-----------*/
+/* -----------------------------------*/
+
+header {
+    font-size: large;
+    
+}
 
 
 /* -----------------------------------*/

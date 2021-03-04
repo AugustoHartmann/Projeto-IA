@@ -23,6 +23,8 @@ class Core {
 				$parametros = $url;
 			}
 
+			
+
 		} else {
 			$atualController = 'homeController';
 			$atualAcao = 'index';
@@ -40,7 +42,6 @@ class Core {
 			$atualAcao = 'index';
 		}
 
-		
 		call_user_func_array(array($c, $atualAcao), $parametros);
 
 	}

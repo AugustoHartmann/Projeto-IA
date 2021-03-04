@@ -11,8 +11,12 @@ class homeController extends Controller {
     public function index() {
         $dados = array();
 
+        $generos = new Generos();
         $livros = new Livros();
-        $dados["livros"] = $livros->getAllgenero();
+
+        $dados["genero"] = $generos->getAllgenero();
+        $dados["livro"] = $livros->getSortidosLivros();
+
 
         $this->loadTemplate('home', $dados);
     }

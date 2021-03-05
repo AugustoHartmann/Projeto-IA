@@ -14,6 +14,21 @@ class tipoController extends Controller {
 
         $livro = new Livros();
         $genero = new Generos();
+
+        if(!isset($_SESSION['genero'])) {
+            $_SESSION['genero'] = array();
+        }
+
+
+        if($nome != "Todos") {
+            if(array_key_exists($nome, $_SESSION['genero'])) {
+                $_SESSION['genero'][$nome] += 1;
+            } else {
+                $_SESSION['genero'][$nome] = 1;
+            }
+        }
+
+
         $dados['livro'] = $livro->getTipoLivro($nome);
         $dados['genero'] = $genero->getAllgenero();
 

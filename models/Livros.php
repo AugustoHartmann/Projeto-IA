@@ -43,6 +43,28 @@
 
         }
 
+
+        public function getLivro($id) {
+
+            $data = array();
+
+            $sql = "SELECT * from livro where id_livro = :id";
+
+            $sql = $this->db->prepare($sql);
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+
+            if($sql->rowCount() > 0) {
+                $data = $sql->fetchAll();
+                return $data;
+            } else {
+                return '';
+            }
+
+        }
+
+
+
     }
 
 ?>

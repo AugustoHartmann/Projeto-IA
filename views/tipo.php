@@ -15,11 +15,13 @@
 			<p>Biblioteca</p>
 		</div>
 
-		<div></div>
+		<div>
+			<a href="<?php echo  BASE_URL;?>">VOLTAR</a>
+		</div>
 	</div>
 </header>
 
-
+	
 	
 
 	<section class="container" id="section-livros">

@@ -1,0 +1,142 @@
+/* -----------------------------------*/
+/* ---------->>> Global <<<-----------*/
+/* -----------------------------------*/
+
+body {
+    margin: 0px;
+    background-color: rgb(241, 241, 241);
+    font-family: Arial, Helvetica, sans-serif;   
+}
+
+footer {
+    margin-top: 10px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+    margin: auto;
+}
+
+section {
+    max-width: 960px;
+    margin: auto;   
+}
+
+button {
+    border-width: 0px;
+}
+
+input {
+    cursor:pointer;
+}
+
+input:focus {
+    border: 0 none;
+    outline: 0; 
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> Home body <<<-----------*/
+/* -----------------------------------*/
+
+
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100px;
+}
+
+nav ul li {
+    list-style-type: none;
+    /*Aqui é definido para não ter nenhum objeto da coluna*/
+}
+
+nav ul li a {
+    display:block;
+    text-decoration: none;
+    color:coral;
+    background-color: white;
+    padding:5px;
+    margin-bottom: 1px;
+    /*Aqui são definidos as características das palavras dentro da lista */
+}
+
+nav ul li a:hover {
+    background-color:darkgrey;/* com o hover é possível de fazer aquele efeito quando o mouse passa por cima de um objeto, fazer esse objetop mudar de cor*/
+
+}
+
+
+#titulo-pagina {
+
+}
+
+#div-imagem {
+    width: 175px;
+    height: 175px;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#div-imagem img {
+    width: 100%;
+    height: 100%;
+}
+
+#livros{
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#div-livros {
+    text-align: center;
+    display:flex;
+}
+
+#livro {
+    background-color: rgb(214, 212, 212);
+    padding: 24px;
+    margin: 8px;
+    width: 210px;
+    margin-left: 52px;
+    border-radius: 20px;
+}
+
+#section-livros {
+    max-width: 1100px;
+}
+
+/* -----------------------------------*/
+/* ---------->>> Home Header <<<-----------*/
+/* -----------------------------------*/
+
+header {
+    font-size: large;
+    
+}
+
+
+/* -----------------------------------*/
+/* ---------->>> Home Footer <<<-----------*/
+/* -----------------------------------*/
+
+footer {
+    
+}
+
+
+

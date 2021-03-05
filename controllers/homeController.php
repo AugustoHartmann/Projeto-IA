@@ -1,6 +1,7 @@
 <?php
-class homeController extends controller {
 
+class homeController extends Controller {
+    
 	private $user;
 
     public function __construct() {
@@ -9,7 +10,13 @@ class homeController extends controller {
 
     public function index() {
         $dados = array();
-        
+
+        $generos = new Generos();
+        $livros = new Livros();
+
+        $dados["genero"] = $generos->getAllgenero();
+        $dados["livro"] = $livros->getSortidosLivros();
+
 
         $this->loadTemplate('home', $dados);
     }

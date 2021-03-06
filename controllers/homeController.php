@@ -16,18 +16,38 @@ class homeController extends Controller {
             $_COOKIE['genero'] = array();
         }
 */
+
+
+
+
         if(!isset($_SESSION['genero'])) {
             $_SESSION['genero'] = array();
         }
 
-        $generos = new Generos();
-        $livros = new Livros();
+        if(count($_SESSION['genero'])>0) {
 
-        $dados["genero"] = $generos->getAllgenero();
-        $dados["livro"] = $livros->getSortidosLivros();
+            print_r("IF");
+            
+            $generos = new Generos();
+            $livros = new Livros();
 
+            $dados["genero"] = $generos->getAllgenero();
+            $dados["livro"] = $livros->getSortidosLivros();
 
-        $this->loadTemplate('home', $dados);
+            $this->loadTemplate('home', $dados);
+
+        } else {
+
+            print_r("ELSE");
+
+            $generos = new Generos();
+            $livros = new Livros();
+
+            $dados["genero"] = $generos->getAllgenero();
+            $dados["livro"] = $livros->getSortidosLivros();
+
+            $this->loadTemplate('home', $dados);            
+        }
     }
 
     public function zerar() {

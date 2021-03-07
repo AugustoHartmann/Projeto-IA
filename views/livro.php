@@ -18,7 +18,7 @@
 <pre>
 
 <?php
-
+echo $_GET['id'];
 print_r($_SESSION['genero']);
 
 

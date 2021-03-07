@@ -38,7 +38,7 @@ class homeController extends Controller {
 
         } else {
 
-            print_r("ELSE");
+            //print_r("ELSE");
 
             $generos = new Generos();
             $livros = new Livros();

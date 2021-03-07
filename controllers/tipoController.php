@@ -28,13 +28,20 @@ class tipoController extends Controller {
             }
         }
 
+
         $dados['livro'] = $livro->getTipoLivro($nome);
         $dados['genero'] = $genero->getAllgenero();
 
-        $this->loadTemplate('home', $dados);
+
+
+        
+
+        $this->loadTemplate('tipo', $dados);
 
     }
 
+
 }
+
 
 ?>

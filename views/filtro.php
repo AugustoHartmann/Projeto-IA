@@ -2,16 +2,13 @@
 
 <?php
 	$variavel = 0;
-	//print_r($livro);
-	//print_r($livros);
-	//exit;
+	
+    //print_r($livro);
 ?>
 
 
 
-
-
-	<nav class="navbar navbar-light navbar-expand-md bg-dark navigation-clean">
+    <nav class="navbar navbar-light navbar-expand-md bg-dark navigation-clean">
         <div class="container-fluid"><a class="navbar-brand text-white-50" href="<?php echo BASE_URL ?>"><i class="icon ion-android-arrow-back"></i>&nbsp;Voltar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1"></div>
@@ -20,6 +17,13 @@
 			<a href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
 		</div>
     </nav>
+
+	<pre>
+		<?php
+							
+			print_r($_SESSION['genero']);
+		?>
+	</pre>
 	
 
 	<section class="container" id="section-livros">
@@ -41,21 +45,22 @@
 					
 					<div id="div-livros">
 						<?php foreach($livro as $l):?>
-								
+							<?php foreach($l as $l2):?>
 								<div id="livro">
 								
 									<div id="div-imagem">
-										<a href="<?php echo BASE_URL?>livro/?id=<?php echo $l['id_livro']?>">
-											<img src="data:image/png;base64,<?php echo $l['foto']?>" alt="">
+										<a href="<?php echo BASE_URL?>livro/?id=<?php echo $l2['id_livro']?>">
+											<img src="data:image/png;base64,<?php echo $l2['foto']?>" alt="">
 										</a>
 									</div>
 								
 									<div>
 										<div>
-											<p><?php echo $l['nome'] ?></p>
+
+											<p><?php echo $l2['nome'] ?></p>
 										</div>
 										<div>
-											<div>Gênero</div>
+											<div></div>
 										</div>
 										<div>
 											<p>
@@ -73,7 +78,7 @@
 										echo "</div><div id='div-livros'>";
 									}
 								?>
-							
+                            <?php endforeach;?>
 						<?php endforeach;?>
 					</div>
 					

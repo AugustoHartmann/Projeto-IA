@@ -60,6 +60,35 @@
             } else {
                 return '';
             }
+        }
+
+        public function getLivrosByFiltro($dados = array()) {
+
+
+            //print_r($dados);
+
+            $data = array();
+
+            foreach($dados as $key=>$l) {
+
+                $sql = "SELECT * FROM livro l, livro_genero lg, genero g WHERE g.nome = '$key'
+                and g.id_genero = lg.id_genero and lg.id_livro = l.id_livro LIMIT $l";
+               
+                $sql = $this->db->query($sql);
+
+                //$sql = $this->db->prepare($sql);
+                //$sql->bindValue(":key", $key);
+                //$sql->execute();
+
+                if($sql->rowCount() > 0) {
+                    $data[$key] = $sql->fetchAll();
+                } else {
+                    
+                }
+            }
+
+            return $data;
+
 
         }
 

@@ -50,33 +50,28 @@ $variavel = 0;
 				<div id="div-livros">
 					<?php foreach ($livro as $l) : ?>
 						<div id="livro">
-							 <!-- <div id="div-imagem">
-								<a href="<?php //echo BASE_URL ?>livro/?id=<?php echo $l['id_livro'] ?>">
-									<img src="<?php echo BASE_URL; ?>assets/images/<?php echo $l['foto'] ?>" alt="">
-								</a>-->
-							</div>
-
-							<div>
-								<div>
-									<p><?php echo $l['nome'] ?></p>
-								</div>
-								<div>
-									<a href="<?php echo BASE_URL ?>/livro/?id=<?php echo $l['id_livro'] ?>">
+								
+									<div id="div-imagem">
+									<a href="<?php echo BASE_URL ?>livro/?id=<?php echo $l['id_livro'] ?>">
 										<img class="capa" src="data:image/png;base64,<?php echo $l['foto'] ?>" alt="">
 									</a>
+									</div>
+								
+									<div>
+										<div>
+											<p><?php echo $l['nome'] ?></p>
+										</div>
+										<div>
+											<div>Gênero</div>
+										</div>
+										<div>
+											<p>
+												
+											</p>
+										</div>
+									</div>
+								
 								</div>
-								<div>
-									<div>Gênero</div>
-
-								</div>
-								<div>
-									<p>
-
-									</p>
-								</div>
-							</div>
-
-						</div>
 
 						<?php
 						$variavel = $variavel + 1;

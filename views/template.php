@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    	<title>Loja</title>
+    	<title>Recomendação de Livros S.A.</title>
 		<!-- CSS only -->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 		<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css" type="text/css" />
@@ -14,7 +14,7 @@
 		<?php $this->loadViewInTemplate($viewName, $viewData); ?> 
 
 		<footer class="footer">
-        	<p>&copy; <?= date('Y') ?> Company, Inc. &middot; <a href="#">Francisco</a> &middot; <a href="#">Salomon</a> &middot; <a href="#">Maier</a></p>
+        	<p>&copy; <?= date('Y') ?> Projeto I.A.  &middot; <a href="https://github.com/AugustoHartmann">Augusto</a> &middot; <a href="https://github.com/FranciscoMaier98">Francisco</a> &middot; <a href="https://github.com/CharlesMossmann">Charles</a></p>
     	</footer>
 
 	</body>

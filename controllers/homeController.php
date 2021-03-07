@@ -26,7 +26,7 @@ class homeController extends Controller {
 
         if(count($_SESSION['genero'])>0) {
 
-            print_r("IF");
+            //print_r("IF");
             
             $generos = new Generos();
             $livros = new Livros();

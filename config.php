@@ -6,7 +6,7 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost:8080");
+	define("BASE_URL", "http://localhost/ia/");
 	$config['dbname'] = 'ia';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';

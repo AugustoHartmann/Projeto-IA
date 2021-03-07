@@ -45,22 +45,22 @@
 						<?php foreach($livro as $l):?>
 								
 								<div id="livro">
-								
-									<div id="div-imagem">
+									<!-- <div id="div-imagem">
 										<img src="<?php echo BASE_URL; ?>assets/images/<?php echo $l['foto']?>" alt="">
+									</div>-->
+									<div id="div-imagem">
+										<a href="<?php echo BASE_URL ?>/livro/?id=<?php echo $l['id_livro'] ?>">
+											<img class="capa" src="data:image/png;base64,<?php echo $l['foto'] ?>" alt="">
+										</a>
 									</div>
-								
+									
 									<div>
-										<div>
-											<p>Título do livro</p>
-										</div>
+									<?php echo "TESTANDO" ?>
+										<p>titulo</p>
+									</div>
+									
 										<div>
 											<div>Gênero</div>
-										</div>
-										<div>
-											<p>
-												
-											</p>
 										</div>
 									</div>
 								

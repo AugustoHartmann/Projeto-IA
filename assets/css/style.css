@@ -150,3 +150,16 @@ footer {}
 img.capa {
     width: 396px;
 }
+
+a.links {
+    text-decoration: none;
+    color: #006699;
+}
+
+a.links:hover {
+    color: #009999;
+}
+
+a.generos {
+    color: lightblue;
+}

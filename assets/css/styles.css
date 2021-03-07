@@ -1,0 +1,15 @@
+#body {
+  filter: blur(100px);
+  -webkit-backdrop-filter: blur(9px);
+  backdrop-filter: blur(9px);
+  text-size-adjust: 100%;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+div#content {
+  border-radius: 10px;
+  box-shadow: initial;
+}
+

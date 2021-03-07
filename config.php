@@ -10,7 +10,7 @@ if(ENVIRONMENT == 'development') {
 	$config['dbname'] = 'ia';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
-	$config['dbpass'] = '';
+	$config['dbpass'] = 'sorriso001';
 } else {
 	define("BASE_URL", "");
 	$config['dbname'] = '';

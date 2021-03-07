@@ -55,8 +55,7 @@
 									</div>
 									
 									<div>
-									<?php echo "TESTANDO" ?>
-										<p>titulo</p>
+										<p><?php echo $l['nome'] ?></p>
 									</div>
 									
 										<div>

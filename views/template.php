@@ -16,8 +16,8 @@
 
 		<?php $this->loadViewInTemplate($viewName, $viewData); ?> 
 
-		<footer class="footer" style="background-color: #BBB; font-family: 'Roboto', sans-serif;">
-        	<p>&copy; <?= date('Y') ?> Projeto I.A.  &middot; <a class="links"href="https://github.com/AugustoHartmann">Augusto</a> &middot; <a class="links" href="https://github.com/FranciscoMaier98">Francisco</a> &middot; <a class="links" href="https://github.com/CharlesMossmann">Charles</a></p>
+		<footer class="footer">
+        	<p>&copy; <?= date('Y') ?> Projeto I.A.  &middot; <a href="https://github.com/AugustoHartmann">Augusto</a> &middot; <a href="https://github.com/FranciscoMaier98">Francisco</a> &middot; <a href="https://github.com/CharlesMossmann">Charles</a></p>
     	</footer>
 
 	</body>

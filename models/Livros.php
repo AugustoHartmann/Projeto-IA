@@ -17,6 +17,7 @@
 
         }
 
+        
         public function getTipoLivro($nome) {
             $data = array();
 

@@ -37,7 +37,7 @@
 			<div class="col-10">
 
 				<div id="livros">
-
+				
 					
 					<div id="div-livros">
 						<?php foreach($livro as $l):?>

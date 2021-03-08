@@ -10,7 +10,7 @@
         <p>Alterar produto</p>
     </div>
     <div class="adicionar">
-
+    
 		<a href="<?php echo BASE_URL;?>">Voltar</a>
 	
 	</div>    

@@ -11,7 +11,7 @@ class tipoController extends Controller {
         $nome = $_GET['nome'];
 
         $dados = array();
-
+        
         $livro = new Livros();
         $genero = new Generos();
         $livro_genero = new Livro_genero();

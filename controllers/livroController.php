@@ -12,6 +12,9 @@
         $id = $_GET['id'];
 
 
+
+
+        
         $dados = array();
 
         $generos = new Generos();

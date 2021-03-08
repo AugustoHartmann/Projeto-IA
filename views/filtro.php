@@ -48,7 +48,7 @@
 											<img src="data:image/png;base64,<?php echo $l2['foto']?>" alt="">
 										</a>
 									</div>
-								
+									
 									<div>
 										<div>
                                             <?php

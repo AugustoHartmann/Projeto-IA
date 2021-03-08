@@ -48,7 +48,7 @@ class homeController extends Controller {
             $dados["genero"] = $generos->getAllgenero();
             $dados['livro'] = $livros->getLivrosByFiltro($prioridade);
             
-
+            
             //$contar = count($dados["livro"]);
             //print_r($dados['livro']);
             //exit;
@@ -58,7 +58,7 @@ class homeController extends Controller {
 
             
             $this->loadTemplate('filtro', $dados);
-
+            
         } else {
 
             //print_r("ELSE");

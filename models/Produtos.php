@@ -17,7 +17,7 @@
             }
 
         }
-
+        
         public function excProduto($id) {
 
             $sql = "SELECT imagem FROM produto WHERE id=:id";            

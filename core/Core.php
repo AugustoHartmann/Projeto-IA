@@ -24,6 +24,7 @@ class Core {
 			}
 
 			
+			
 
 		} else {
 			$atualController = 'homeController';

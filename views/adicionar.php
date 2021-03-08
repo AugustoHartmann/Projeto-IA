@@ -15,6 +15,7 @@
 	</div>    
 </header>
 
+
 <body>
     <?php if(isset($_GET['info'])): ?>
         <?php if($_GET['info']=='extensao'):?>

@@ -1,5 +1,3 @@
-# Books Recomendation System using A.I.
+# Sistema de recomendação de livros com I.A.
 
-This project are created using Laravel as principal Framework. 
-
-It propose are be a recomendation system for users that are searching for a book based on her previous read books.
+O sistema utiliza um padrão MVC com PHP e serve como trabalho para a disciplina de Inteligência Artificial pelo IFRS - Campus Feliz

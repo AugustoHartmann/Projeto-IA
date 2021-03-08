@@ -14,6 +14,8 @@ class tipoController extends Controller {
 
         $livro = new Livros();
         $genero = new Generos();
+        $livro_genero = new Livro_genero();
+
 
         if(!isset($_SESSION['genero'])) {
             $_SESSION['genero'] = array();
@@ -31,10 +33,8 @@ class tipoController extends Controller {
 
         $dados['livro'] = $livro->getTipoLivro($nome);
         $dados['genero'] = $genero->getAllgenero();
+        $dados["livro_genero"] = $livro_genero->getRelacao();
 
-
-
-        
 
         $this->loadTemplate('tipo', $dados);
 

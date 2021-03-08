@@ -52,14 +52,18 @@
 								
 									<div>
 										<div>
-											<p><?php echo $l['nome'] ?></p>
+											<p><?php echo $l[1] ?></p>
 										</div>
-										<div>
-											<div>Gênero</div>
-										</div>
+										
 										<div>
 											<p>
-												
+											<?php foreach($genero as $g):?>
+												<?php foreach($livro_genero as $lg):?>
+													<?php if($lg['id_livro'] == $l['id_livro'] && $lg['id_genero'] == $g['id_genero']):?>
+														<?php echo $g['nome']?>
+													<?php endif;?>
+												<?php endforeach; ?>
+											<?php endforeach; ?>
 											</p>
 										</div>
 									</div>

@@ -14,16 +14,11 @@
                 class="collapse navbar-collapse" id="navcol-1"></div>
         </div>
 		<div>
-			<a href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
+			<a class="btn btn-primary" href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
 		</div>
     </nav>
 
-	<pre>
-		<?php
-							
-			print_r($_SESSION['genero']);
-		?>
-	</pre>
+	
 	
 
 	<section class="container" id="section-livros">
@@ -56,16 +51,15 @@
 								
 									<div>
 										<div>
-
-											<p><?php echo $l2['nome'] ?></p>
+                                            <?php
+                                                print_r($l2[1])
+                                            ?>
 										</div>
 										<div>
 											<div></div>
 										</div>
 										<div>
-											<p>
-												
-											</p>
+                                            <p><?php echo $l2['nome'] ?></p>
 										</div>
 									</div>
 								

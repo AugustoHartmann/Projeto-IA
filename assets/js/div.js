@@ -1,1 +1,0 @@
-document.getElementById("content").style.height = screen.height;

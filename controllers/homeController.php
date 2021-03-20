@@ -28,13 +28,44 @@ class homeController extends Controller {
 
             //print_r("IF");
             
+            $rank = array();
+
+            foreach($_SESSION['genero'] as $key=>$g) {
+                $rank[$key] = $g;
+            }
+
+            arsort($rank);
+
+            $total = 0;
+
+            foreach($rank as $key=>$g) {
+                $total += $g;
+            }
+
+            $prioridade = array();
+
+
+            foreach($rank as $key=>$g) {
+                $prioridade[$key] = round(($g/$total)*10);
+            }
+            
             $generos = new Generos();
             $livros = new Livros();
+            $livro_genero = new Livro_genero();
 
             $dados["genero"] = $generos->getAllgenero();
-            $dados["livro"] = $livros->getSortidosLivros();
+            $dados['livro'] = $livros->getLivrosByFiltro($prioridade);
+            
 
-            $this->loadTemplate('tipo', $dados);
+            //$contar = count($dados["livro"]);
+            //print_r($dados['livro']);
+            //exit;
+            
+
+            $dados["livro_genero"] = $livro_genero->getRelacao();
+
+            
+            $this->loadTemplate('filtro', $dados);
 
         } else {
 

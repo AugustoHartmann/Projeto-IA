@@ -17,7 +17,7 @@
 		</div>
 
 		<div>
-			<a href="<?php echo  BASE_URL;?>">VOLTAR</a>
+			<a href="<?php echo  BASE_URL;?>home">VOLTAR</a>
 		</div>
 
 		<div>

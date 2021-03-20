@@ -11,10 +11,6 @@
 
         $id = $_GET['id'];
 
-
-
-
-        
         $dados = array();
 
         $generos = new Generos();
@@ -35,7 +31,6 @@
                 $_SESSION['genero'][$dg['nome']] = 1;
             }
         }
-
         $this->loadTemplate("livro", $dados);
 
     }

@@ -17,7 +17,6 @@
             }
         }
 
-        
         public function getGenero($id) {
             $data = array();
 

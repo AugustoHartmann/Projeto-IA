@@ -21,13 +21,14 @@ class homeController extends Controller {
 
 
         if(!isset($_SESSION['genero'])) {
-            $_SESSION['genero'] = array();
+            $_SESSION['genero'] = array('q'=>0);
         }
 
-        if(count($_SESSION['genero'])>0) {
+        
+        print_r($_SESSION['genero']);
 
-            //print_r("IF");
-            
+        if(!empty($_SESSION['genero']) and sizeof($_SESSION['genero'])>1) {
+
             $rank = array();
 
             foreach($_SESSION['genero'] as $key=>$g) {
@@ -66,6 +67,7 @@ class homeController extends Controller {
 
             
             $this->loadTemplate('filtro', $dados);
+            //$this->loadTemplate('tipo', $dados);
 
         } else {
 
@@ -82,8 +84,9 @@ class homeController extends Controller {
     }
 
     public function zerar() {
-        session_destroy();
         
+        
+        unset($_SESSION['genero']);
         return $this->index();
     }
 

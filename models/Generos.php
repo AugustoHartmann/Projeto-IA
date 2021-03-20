@@ -6,7 +6,7 @@
 
             $data = array();
 
-            $sql = "SELECT id_genero, nome FROM genero";
+            $sql = "SELECT id_genero, nome_genero FROM genero";
             $sql = $this->db->query($sql);
 
             if($sql->rowCount() > 0) {
@@ -20,7 +20,7 @@
         public function getGenero($id) {
             $data = array();
 
-            $sql = "SELECT g.nome FROM genero g, livro l, livro_genero lg 
+            $sql = "SELECT g.nome_genero FROM genero g, livro l, livro_genero lg 
             where l.id_livro = :id AND l.id_livro = lg.id_livro AND lg.id_genero = g.id_genero";
 
             $sql = $this->db->prepare($sql);

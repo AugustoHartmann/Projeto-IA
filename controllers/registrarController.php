@@ -23,6 +23,7 @@ class registrarController extends Controller {
 
         $registrar = new Registro();
         $registrar->inserirRegistro($nome, $senha);
+        $registrar->carga_inicial();
 
         $this->loadTemplate('login',$dados);
     }

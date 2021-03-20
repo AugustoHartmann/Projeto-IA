@@ -25,10 +25,10 @@
         }
 
         foreach($dados["generos"] as $dg) {
-            if(array_key_exists($dg['nome'], $_SESSION['genero'])) {
-                $_SESSION['genero'][$dg['nome']] += 1;
+            if(array_key_exists($dg['nome_genero'], $_SESSION['genero'])) {
+                $_SESSION['genero'][$dg['nome_genero']] += 1;
             } else {
-                $_SESSION['genero'][$dg['nome']] = 1;
+                $_SESSION['genero'][$dg['nome_genero']] = 1;
             }
         }
         $this->loadTemplate("livro", $dados);

@@ -2,9 +2,9 @@
 
 <?php
 	$variavel = 0;
-	//print_r($livro);
+	print_r($livro);
 	//print_r($livros);
-
+	//print_r($_SESSION['genero']);
 	//exit;
 ?>
 
@@ -38,7 +38,7 @@
 				<nav>
 					<ul>
 						<?php foreach($genero as $g):?>
-							<li><a href="<?php echo BASE_URL;?>tipo/?nome=<?php echo $g['nome']?>"><?php echo $g['nome']?></a></li>
+							<li><a href="<?php echo BASE_URL;?>tipo/?nome=<?php echo $g['nome_genero']?>"><?php echo $g['nome_genero']?></a></li>
 						<?php endforeach;?>
 					</ul>	
 				</nav>
@@ -61,10 +61,10 @@
 								
 									<div>
 										<div>
-											<p><?php echo $l[1] ?></p>
+											<p><?php echo $l['nome_livro'] ?></p>
 										</div>
 										<div>
-											<div><?php echo $l['nome'] ?></div>
+											<div><?php echo $l['nome_genero'] ?></div>
 										</div>
 										<div>
 											<p>

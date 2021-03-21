@@ -1,11 +1,21 @@
 /* -----------------------------------*/
+
+
 /* ---------->>> Global <<<-----------*/
+
+
 /* -----------------------------------*/
 
 body {
     margin: 0px;
-    background-color: rgb(241, 241, 241);
-    font-family: Arial, Helvetica, sans-serif;   
+    background-image: url(../images/images4.png);
+    height: 500px;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
 }
 
 footer {
@@ -30,7 +40,7 @@ header {
 
 section {
     max-width: 960px;
-    margin: auto;   
+    margin: auto;
 }
 
 button {
@@ -38,20 +48,22 @@ button {
 }
 
 input {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 input:focus {
     border: 0 none;
-    outline: 0; 
+    outline: 0;
 }
 
 
 /* -----------------------------------*/
+
+
 /* ---------->>> Home body <<<-----------*/
+
+
 /* -----------------------------------*/
-
-
 
 nav ul {
     margin: 0;
@@ -65,24 +77,23 @@ nav ul li {
 }
 
 nav ul li a {
-    display:block;
+    display: block;
     text-decoration: none;
-    color:coral;
-    background-color: white;
-    padding:5px;
+    color: coral;
+    background-color: rgb(151, 171, 229);
+    padding: 5px;
     margin-bottom: 1px;
+    border-radius: 10px;
+    color: black;
     /*Aqui são definidos as características das palavras dentro da lista */
 }
 
 nav ul li a:hover {
-    background-color:darkgrey;/* com o hover é possível de fazer aquele efeito quando o mouse passa por cima de um objeto, fazer esse objetop mudar de cor*/
-
+    background-color: darkgrey;
+    /* com o hover é possível de fazer aquele efeito quando o mouse passa por cima de um objeto, fazer esse objetop mudar de cor*/
 }
 
-
-#titulo-pagina {
-
-}
+#titulo-pagina {}
 
 #div-imagem {
     width: 175px;
@@ -96,15 +107,15 @@ nav ul li a:hover {
     height: 100%;
 }
 
-#livros{
-    background-color: white;
+#livros {
+    background-color: rgb(253, 253, 253);
     padding: 20px;
     border-radius: 10px;
 }
 
 #div-livros {
     text-align: center;
-    display:flex;
+    display: flex;
 }
 
 #livro {
@@ -120,23 +131,97 @@ nav ul li a:hover {
     max-width: 1100px;
 }
 
+
 /* -----------------------------------*/
+
+
 /* ---------->>> Home Header <<<-----------*/
+
+
 /* -----------------------------------*/
 
 header {
     font-size: large;
-    
 }
 
 
 /* -----------------------------------*/
+
+
 /* ---------->>> Home Footer <<<-----------*/
+
+
 /* -----------------------------------*/
 
-footer {
-    
+footer {}
+
+img.capa {
+    width: 396px;
+}
+
+a.links {
+    text-decoration: none;
+    color: #006699;
+}
+
+a.links:hover {
+    color: #009999;
+}
+
+a.generos {
+    color: lightblue;
 }
 
 
 
+/* -----------------------------------*/
+/* ---------->>> Login <<<-----------*/
+/* -----------------------------------*/
+
+#titulo-principal {
+    text-align: center;
+}
+
+#titulo-pagina-bem-vindo{
+    text-align: left;
+}
+
+#titulo-pagina-voltar {
+    text-align: left;
+}
+
+#voltar{
+    color: black;
+}
+
+#logout{
+    color: black;
+}
+
+
+#zerar{
+    color: black;
+}
+
+
+#titulo-pagina-logout {
+    text-align: right;
+}
+
+#div-login {
+    padding: 10px;
+    text-align: center;
+}
+
+#div-login #login-input {
+    margin: 10px;    
+}
+
+#div-registrar {
+    padding: 10px;
+    text-align: center;
+}
+
+#div-registrar #registrar-input  {
+    margin: 10px;
+}

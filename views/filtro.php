@@ -9,16 +9,24 @@
 
 
     <nav class="navbar navbar-light navbar-expand-md bg-dark navigation-clean">
-        <div class="container-fluid"><a class="navbar-brand text-white-50" href="<?php echo BASE_URL ?>"><i class="icon ion-android-arrow-back"></i>&nbsp;Voltar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+        <div class="container-fluid"><a class="navbar-brand text-white-50" href="<?php echo BASE_URL ?>home"><i class="icon ion-android-arrow-back"></i>&nbsp;Voltar</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1"></div>
         </div>
 		<div>
-			<a class="btn btn-primary" href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
+		<a href="<?php echo BASE_URL ?>login/sair">LOGOUT</a>
+		</div>
+		<div>
+			<a href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
 		</div>
     </nav>
 
-	
+	<pre>
+		<?php
+							
+			//print_r($_SESSION['genero']);
+		?>
+	</pre>
 	
 
 	<section class="container" id="section-livros">
@@ -27,7 +35,7 @@
 				<nav>
 					<ul>
 						<?php foreach($genero as $g):?>
-							<li><a href="<?php echo BASE_URL;?>tipo/?nome=<?php echo $g['nome']?>"><?php echo $g['nome']?></a></li>
+							<li><a href="<?php echo BASE_URL;?>tipo/?nome=<?php echo $g['nome_genero']?>"><?php echo $g['nome_genero']?></a></li>
 						<?php endforeach;?>
 					</ul>	
 				</nav>
@@ -48,18 +56,18 @@
 											<img src="data:image/png;base64,<?php echo $l2['foto']?>" alt="">
 										</a>
 									</div>
-									
+								
 									<div>
 										<div>
                                             <?php
-                                                print_r($l2[1])
+                                                print_r($l2['nome_livro'])
                                             ?>
 										</div>
 										<div>
 											<div></div>
 										</div>
 										<div>
-                                            <p><?php echo $l2['nome'] ?></p>
+                                            <p><?php echo $l2['nome_genero'] ?></p>
 										</div>
 									</div>
 								

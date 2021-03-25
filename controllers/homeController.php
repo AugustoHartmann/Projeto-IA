@@ -6,6 +6,7 @@ class homeController extends Controller {
 
     public function __construct() {
         parent::__construct();
+        
     }
 
     public function index() {
@@ -22,13 +23,13 @@ class homeController extends Controller {
 
         if(!isset($_SESSION['genero'])) {
             $_SESSION['genero'] = array('q'=>0);
-        }ç
+        }
 
         
         //print_r($_SESSION['genero']);
 
         if(!empty($_SESSION['genero']) and sizeof($_SESSION['genero'])>1) {
-
+            $l = new login();
             $rank = array();
 
             foreach($_SESSION['genero'] as $key=>$g) {
@@ -44,12 +45,19 @@ class homeController extends Controller {
             }
 
             $prioridade = array();
-
-            //if($g > 0){    
+            try{
+            if($g > 0){    
                 foreach($rank as $key=>$g) {
                     $prioridade[$key] = round(($g/$total)*10);
                 }
-            //}
+            }
+            else {
+                throw new Exception("PHP Error Not permitted division by zero");
+                }
+            }
+            catch(Exception $e){
+                $l->excluir_dados();
+            }
             $generos = new Generos();
             $livros = new Livros();
             $livro_genero = new Livro_genero();
@@ -87,7 +95,9 @@ class homeController extends Controller {
         
         
         unset($_SESSION['genero']);
+        header("Location: ".BASE_URL.'home/');
         return $this->index();
+        
     }
 
 

@@ -33,6 +33,8 @@
             $dados = $login->verificar($nome, $senha);
 
             $id_usuario = $dados[0]['id'];
+            
+            
 
 
             
@@ -88,7 +90,7 @@
 
             header("Location: ".BASE_URL);
         }
-
+        
 
     }
 

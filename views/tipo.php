@@ -24,7 +24,7 @@
 			<p>Bem-vindo <?php echo $_SESSION['usuario']?></p>
 		</div>
 		<div>
-			<a href="<?php echo BASE_URL ?>login/sair">LOGOUT</a>
+			<a href="<?php echo BASE_URL ?>login/sair">SAIR</a>
 		</div>
 	</div>
 </header>

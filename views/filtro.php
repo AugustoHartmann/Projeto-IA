@@ -14,10 +14,10 @@
                 class="collapse navbar-collapse" id="navcol-1"></div>
         </div>
 		<div>
-		<a href="<?php echo BASE_URL ?>login/sair">LOGOUT</a>
+			<a class="btn btn-danger" href="<?php echo BASE_URL ?>login/sair">SAIR</a>
 		</div>
 		<div>
-			<a href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
+			<a class="btn btn-primary" href="<?php echo BASE_URL?>home/zerar">ZERAR</a>
 		</div>
     </nav>
 

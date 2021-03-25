@@ -3,17 +3,16 @@
     class Login extends model {
 
         public function verificar($nome, $senha) {
-            $sql = "SELECT id, nome_usuario FROM usuario WHERE senha=:senha and nome_usuario=:nome";
+            $sql = "SELECT id, nome_usuario FROM usuario WHERE nome_usuario=:nome AND senha=:senha";
             $sql = $this->db->prepare($sql);
 
-
+            var_dump($nome);
             $sql->bindValue(":nome", $nome);
             $sql->bindValue(":senha", $senha);
             $sql->execute();
-
+            
             if($sql->rowCount() > 0) {
                 $_SESSION['usuario'] = $nome;
-
                 $data = $sql->fetchAll();
 
 
@@ -49,7 +48,6 @@
 
             $sql = "SELECT dados FROM usuario_dados WHERE id_usuario=:id";
             $sql = $this->db->prepare($sql);
-
             $sql->bindValue(":id", $id_usuario);
             $sql->execute();
 

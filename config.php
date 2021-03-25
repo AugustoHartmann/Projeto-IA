@@ -7,10 +7,10 @@ global $db;
 $config = array();
 if(ENVIRONMENT == 'development') {
 	define("BASE_URL", "http://localhost/ia/");
-	$config['dbname'] = 'ia3';
+	$config['dbname'] = 'ia';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
-	$config['dbpass'] = '';
+	$config['dbpass'] = 'sorriso001';
 } else {
 	define("BASE_URL", "");
 	$config['dbname'] = '';

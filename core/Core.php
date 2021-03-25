@@ -24,10 +24,9 @@ class Core {
 			}
 
 			
-			
 
 		} else {
-			$atualController = 'homeController';
+			$atualController = 'loginController';
 			$atualAcao = 'index';
 		}
 

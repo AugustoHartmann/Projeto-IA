@@ -19,9 +19,6 @@ if(ENVIRONMENT == 'development') {
 	$config['dbpass'] = '';
 }
 
-
-
-
 $config['default_lang'] = "en";
 
 $db = new PDO("mysql:dbname=".$config['dbname'].";host=".$config['host'], $config['dbuser'], $config['dbpass']);

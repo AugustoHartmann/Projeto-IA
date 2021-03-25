@@ -1,24 +1,26 @@
 /* -----------------------------------*/
+
+
 /* ---------->>> Global <<<-----------*/
+
+
 /* -----------------------------------*/
 
 body {
     margin: 0px;
-    background-color: rgb(241, 241, 241);
-    font-family: Arial, Helvetica, sans-serif;   
-}
-
-footer {
-    margin-top: 10px;
-    padding: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-footer p {
-    margin-top: 0;
-    margin-bottom: 1rem;
-    text-align: center;
+    background-image: url(../images/images4.png);
+    background-position: center;
+    background-size: cover;
+    /*position: relative; */
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
 }
 
 header {
@@ -30,7 +32,7 @@ header {
 
 section {
     max-width: 960px;
-    margin: auto;   
+    margin: auto;
 }
 
 button {
@@ -38,20 +40,22 @@ button {
 }
 
 input {
-    cursor:pointer;
+    cursor: pointer;
 }
 
 input:focus {
     border: 0 none;
-    outline: 0; 
+    outline: 0;
 }
 
 
 /* -----------------------------------*/
+
+
 /* ---------->>> Home body <<<-----------*/
+
+
 /* -----------------------------------*/
-
-
 
 nav ul {
     margin: 0;
@@ -65,23 +69,20 @@ nav ul li {
 }
 
 nav ul li a {
-    display:block;
+    display: block;
     text-decoration: none;
-    color:coral;
-    background-color: white;
-    padding:5px;
+    color: coral;
+    background-color: rgb(151, 171, 229);
+    padding: 5px;
     margin-bottom: 1px;
+    border-radius: 10px;
+    color: black;
     /*Aqui são definidos as características das palavras dentro da lista */
 }
 
 nav ul li a:hover {
-    background-color:darkgrey;/* com o hover é possível de fazer aquele efeito quando o mouse passa por cima de um objeto, fazer esse objetop mudar de cor*/
-
-}
-
-
-#titulo-pagina {
-
+    background-color: darkgrey;
+    /* com o hover é possível de fazer aquele efeito quando o mouse passa por cima de um objeto, fazer esse objetop mudar de cor*/
 }
 
 #div-imagem {
@@ -96,15 +97,15 @@ nav ul li a:hover {
     height: 100%;
 }
 
-#livros{
-    background-color: white;
+#livros {
+    background-color: rgb(253, 253, 253);
     padding: 20px;
     border-radius: 10px;
 }
 
 #div-livros {
     text-align: center;
-    display:flex;
+    display: flex;
 }
 
 #livro {
@@ -120,23 +121,144 @@ nav ul li a:hover {
     max-width: 1100px;
 }
 
+
 /* -----------------------------------*/
+
+
 /* ---------->>> Home Header <<<-----------*/
+
+
 /* -----------------------------------*/
 
 header {
     font-size: large;
-    
 }
 
 
 /* -----------------------------------*/
+
+
 /* ---------->>> Home Footer <<<-----------*/
+
+
 /* -----------------------------------*/
 
-footer {
-    
+img.capa {
+    width: 396px;
+}
+
+a.links {
+    text-decoration: none;
+    color: #006699;
+}
+
+a.links:hover {
+    color: #009999;
+}
+
+a.generos {
+    color: lightblue;
 }
 
 
+/* -----------------------------------*/
 
+
+/* ---------->>> Login <<<-----------*/
+
+
+/* -----------------------------------*/
+
+#titulo-principal {
+    text-align: center;
+}
+
+#titulo-pagina-bem-vindo {
+    text-align: left;
+    margin-left: 10vw;
+}
+
+#titulo-pagina-voltar {
+    text-align: left;
+}
+
+#voltar {
+    color: black;
+}
+
+#logout {
+    color: black;
+}
+
+#zerar {
+    color: black;
+}
+
+#titulo-pagina-logout {
+    text-align: right;
+}
+
+#div-login {
+    padding: 10px;
+    text-align: center;
+}
+
+#div-login #login-input {
+    margin: 10px;
+}
+
+#div-registrar {
+    padding: 10px;
+    text-align: center;
+}
+
+#div-registrar .registrar-input {
+    margin: 10px;
+}
+
+.logging-div {
+    width: 60%;
+    height: 50%;
+    margin: auto;
+    background-color: azure;
+    margin-top: 50px;
+    border-radius: 7px;
+}
+
+.left {
+    float: left;
+    margin-left: 25px;
+}
+
+.right {
+    justify-content: flex-end;
+    text-align: right;
+    margin-right: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+.footer p {
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    margin-bottom: 0px;
+    background-color: rgb(206, 206, 206);
+    width: 100vw;
+    padding: 10px;
+}
+
+.footer p a {
+    text-decoration: none;
+    color: blue;
+}
+
+.login-link {
+    font-size: 0.8em;
+    text-decoration: none;
+    float: left;
+    padding-left: 20px;
+}

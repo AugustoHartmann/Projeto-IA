@@ -6,18 +6,30 @@ class homeController extends Controller {
 
     public function __construct() {
         parent::__construct();
+        
     }
 
     public function index() {
         $dados = array();
 
+        /*
+        if(!isset($_COOKIE['genero'])) {
+            $_COOKIE['genero'] = array();
+        }
+*/
+
+
+
 
         if(!isset($_SESSION['genero'])) {
-            $_SESSION['genero'] = array();
+            $_SESSION['genero'] = array('q'=>0);
         }
 
-        if(count($_SESSION['genero'])>0) {
-            
+        
+        //print_r($_SESSION['genero']);
+
+        if(!empty($_SESSION['genero']) and sizeof($_SESSION['genero'])>1) {
+            $l = new login();
             $rank = array();
 
             foreach($_SESSION['genero'] as $key=>$g) {
@@ -33,14 +45,19 @@ class homeController extends Controller {
             }
 
             $prioridade = array();
-
-
-            
-
-            foreach($rank as $key=>$g) {
-                $prioridade[$key] = round(($g/$total)*10);
+            try{
+            if($g > 0){    
+                foreach($rank as $key=>$g) {
+                    $prioridade[$key] = round(($g/$total)*10);
+                }
             }
-            
+            else {
+                throw new Exception("PHP Error Not permitted division by zero");
+                }
+            }
+            catch(Exception $e){
+                $l->excluir_dados();
+            }
             $generos = new Generos();
             $livros = new Livros();
             $livro_genero = new Livro_genero();
@@ -48,7 +65,7 @@ class homeController extends Controller {
             $dados["genero"] = $generos->getAllgenero();
             $dados['livro'] = $livros->getLivrosByFiltro($prioridade);
             
-            
+
             //$contar = count($dados["livro"]);
             //print_r($dados['livro']);
             //exit;
@@ -58,33 +75,29 @@ class homeController extends Controller {
 
             
             $this->loadTemplate('filtro', $dados);
-            
+            //$this->loadTemplate('tipo', $dados);
+
         } else {
 
             //print_r("ELSE");
 
             $generos = new Generos();
             $livros = new Livros();
-            $livro_genero = new Livro_genero();
-
 
             $dados["genero"] = $generos->getAllgenero();
             $dados["livro"] = $livros->getSortidosLivros();
-            $dados["livro_genero"] = $livro_genero->getRelacao();
-
-            
-
-            //print_r($dados["livro_genero"]);
-            //exit;
 
             $this->loadTemplate('home', $dados);            
         }
     }
 
     public function zerar() {
-        session_destroy();
         
+        
+        unset($_SESSION['genero']);
+        header("Location: ".BASE_URL.'home/');
         return $this->index();
+        
     }
 
 
